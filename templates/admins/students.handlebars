@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+  
+    .myDiv {
+  border: 10px outset rgb(75, 74, 74);
+  background-color: lightblue;    
+  text-align: center;
+}
+
+    body {
+
+        background-image: linear-gradient(to bottom,
+                rgba(255, 136, 0, 0.767),
+                rgba(0, 0, 255, 0.5)), url("./templates/logins/abc.jpg");
+
+
+    }
+
+    header {
+        background-color: #f0f0f0;
+        width: 100%;
+        position: fixed;
+        /* z-index: 999; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 30px;
+    }
+
+</style>
+<head>
+ 
+  
+</head>
+
+
+  <body>
+    <div class="container">
+  <br>
+    <div class="d-flex justify-content-between">
+  <h1 style="font-size: 60px;color: #2f1dd3;">All Students</h1> <br><br>
+  <div>
+    <form action="/admins" >
+      <button type="submit" class="btn btn-light" style="font-size: 160%;">Back</button>
+      </form>
+  </div>
+  </div>
+  
+<br><br>
+  
+  {{#each student}}
+  <div class="d-flex justify-content-between">
+  <h1 style="font-size: 40px; color: black;">
+    {{name}}
+    </h1>
+    <div style="font-size: x-large;" class="myDiv">
+     <a href="/admins/{{_id}}/edit_students">Edit</a>
+     <form action="/admins/{{_id}}/delete_student?_method=DELETE" method="post">
+      <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+    </div>
+  </div>
+<div style="font-size:large;color: #ffffff;">
+    Username:
+    {{username}}
+</div>
+<div style="font-size:large;color: #ffffff;">
+    Pssword:
+    {{password}}
+</div>
+<div style="font-size:large;color: #ffffff;">
+    Academic_number:
+    {{academic_number}}
+</div>
+<div style="font-size:large;color: #ffffff;">
+    Department:
+    {{department.name}}
+</div>
+<div style="font-size:large;color: #ffffff;">
+    Passed subjects:
+   [ {{passed_subjects1.name}} ,{{passed_subjects2.name}} ,{{passed_subjects3.name}} ,{{passed_subjects4.name}} ,
+    {{passed_subjects5.name}} ,{{passed_subjects6.name}} ,{{passed_subjects7.name}} ,{{passed_subjects8.name}} ,
+    {{passed_subjects9.name}} ,{{passed_subjects10.name}} ,{{passed_subjects11.name}} ,{{passed_subjects12.name}} ,
+    {{passed_subjects13.name}} ,{{passed_subjects14.name}} ,{{passed_subjects15.name}} ]
+</div>
+<div style="font-size:large;color: #ffffff;">
+    Registered subjects: [ 
+    {{registered_subjects1.name}} , {{registered_subjects2.name}},{{registered_subjects3.name}} ,{{registered_subjects4.name}} ,
+    {{registered_subjects5.name}} ,{{registered_subjects6.name}} ]
+    </div>
+<br><br>
+{{/each}}
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>
+ 

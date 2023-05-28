@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+   * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+
+        background-image: linear-gradient(to bottom,
+                rgba(255, 136, 0, 0.767),
+                rgba(0, 0, 255, 0.5)), url("./templates/logins/abc.jpg");
+
+
+    }
+
+    header {
+        background-color: #f0f0f0;
+        width: 100%;
+        position: fixed;
+        /* z-index: 999; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 30px;
+    }
+
+
+
+    section {
+        padding: 100px 200px;
+    }
+
+
+
+
+
+     input[type=submit]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="submit"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+
+    input[type="text"] {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    input[type="text"]:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+ input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+    input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+      select {
+        display: block;
+        padding: 8px;
+        margin-left: 150px;
+        font-size: 17px;
+        font-family: cursive;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        width: 53%;
+        background-color: #fff;
+        color: #333;
+    }
+      select:hover {
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+    .accountDocForm {
+        width: 65%;
+        height: 25%;
+        margin-bottom: 100px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin-left: 15%;
+        background-color: rgba(0, 0, 0, .5);
+        font-size: 30px;
+        color: aliceblue;
+        text-align: center;
+
+    }
+
+    .text {
+
+        font-size: 30px;
+        color: aliceblue;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .titleCreateAccouuntD {
+
+
+        font-size: 50px;
+        padding: 30px;
+        font-family: cursive;
+        color: rgb(72, 75, 253);
+        text-align: center;
+    }
+
+    .UNS {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+</style>
+
+<body>
+    <div class="container">
+  <br>
+    <div class="d-flex justify-content-between">
+  <h1 style="font-size: 60px;color: #2f1dd3;">Registeration Page</h1> <br><br>
+  <div>
+    <form action="/students" >
+      <button type="submit" class="btn btn-light" style="font-size: 160%;">Back</button>
+      </form>
+  </div>
+  </div>
+    </div>
+    </section>
+    <section class="accountDocSection" id="select student passed subjects">
+        <form class="accountDocForm" action="/admins/select_subjects" method="post">
+            <h3 class="titleCreateAccouuntD">Your passed Subjects</h3>
+            <div>
+                <a>[ 1 ] &nbsp</a> {{the_student.passed_subjects1.name}}<a></a><br>
+                <a>[ 2 ] &nbsp</a>  {{the_student.passed_subjects2.name}}<a></a><br>
+                <a>[ 3 ] &nbsp</a>  {{the_student.passed_subjects3.name}}<a></a><br>
+                <a>[ 4 ] &nbsp</a>  {{the_student.passed_subjects4.name}}<a></a><br>
+                <a>[ 5 ] &nbsp</a>  {{the_student.passed_subjects5.name}}<a></a><br>
+                <a>[ 6 ] &nbsp</a>  {{the_student.passed_subjects6.name}}<a></a><br>
+                <a>[ 7 ] &nbsp</a>  {{the_student.passed_subjects7.name}}<a></a><br>
+                <a>[ 8 ] &nbsp</a>  {{the_student.passed_subjects8.name}}<a></a><br>
+                <a>[ 9 ] &nbsp</a>  {{the_student.passed_subjects9.name}}<a></a><br>
+                <a>[ 10 ] &nbsp</a>  {{the_student.passed_subjects10.name}}<a></a><br>
+                <a>[ 11 ]&nbsp</a>   {{the_student.passed_subjects11.name}}<a></a><br>
+                <a>[ 12 ] &nbsp</a>  {{the_student.passed_subjects12.name}}<a></a><br>
+                <a>[ 13 ] &nbsp</a>  {{the_student.passed_subjects13.name}}<a></a><br>
+                <a>[ 14 ] &nbsp</a>  {{the_student.passed_subjects14.name}}<a></a><br>
+                <a>[ 15 ] &nbsp</a>  {{the_student.passed_subjects15.name}}<a></a><br>
+
+
+            </div>
+        </form>
+    </section>
+
+    <section class="accountDocSection" id="select student passed subjects">
+        <form class="accountDocForm" action="/admins/select_subjects" method="post">
+            <h3 class="titleCreateAccouuntD">Supjects and pre-requistie</h3>
+            <div class="container">
+                <div class="d-flex justify-content-between">
+                    <a
+                        style="font-size: 40px; color: rgb(130, 240, 66);padding-left: 15%;padding-right: 15%;">Subject</a>
+                    <div style="font-size: 40px; color: rgb(130, 240, 66);padding-left: 15%;padding-right: 15%;">
+                        <a>Pre_requisite</a> <br>
+                    </div>
+                </div>
+                {{#each subject}}
+                <div class="text" style="background-color: ;">
+                    <div class="d-flex justify-content-between" style="background-color:#333 ;" >
+                        <a >{{name}} :</a>
+                        <div>
+                            <a >{{Pre_requisite.pre_requisiteName}}</a> <br>
+                        </div>
+                    </div>
+                </div>
+
+                {{/each}}
+            </div>
+        </form>
+    </section>
+
+    <section class="accountDocSection" id="select student passed subjects">
+        
+         <form class="accountDocForm" action="/students/student_register1" method="post">
+                <h3 class="titleCreateAccouuntD">Select Subject 1</h3>
+            <div>
+                <select name="registered_subjects1" id="">
+                    <option value="none" selected disabled hidden>{{the_student.registered_subjects1.name}}</option>
+                    {{#each subject}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+
+                </select>
+            </div> <br>
+            <input type="submit" value="Add subject 1">
+            </form>
+                <form class="accountDocForm" action="/students/student_register2" method="post">
+                <h3 class="titleCreateAccouuntD">Select Subject 2</h3>
+            <div>
+                <select name="registered_subjects2" id="">
+                    <option value="none" selected disabled hidden>{{the_student.registered_subjects2.name}}</option>
+                    {{#each subject}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+
+                </select>
+            </div> <br>
+            <input type="submit" value="Add subject 2">
+            </form>
+            <form class="accountDocForm" action="/students/student_register3" method="post">
+            <h3 class="titleCreateAccouuntD">Select Subject 3</h3>
+            <div>
+                <select name="registered_subjects3" id="">
+                    <option value="none" selected disabled hidden>{{the_student.registered_subjects3.name}}</option>
+                    {{#each subject}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+
+                </select>
+            </div><br>
+            <input type="submit" value="Add subject 3">
+            </form>
+            <form class="accountDocForm" action="/students/student_register4" method="post">
+            <h3 class="titleCreateAccouuntD">Select Subject 4</h3>
+            <div>
+                <select name="registered_subjects4" id="">
+                    <option value="none" selected disabled hidden>{{the_student.registered_subjects4.name}}</option>
+                    {{#each subject}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+
+                </select>
+            </div><br>
+            <input type="submit" value="Add subject 4">
+            </form>
+            <form class="accountDocForm" action="/students/student_register5" method="post">
+            <h3 class="titleCreateAccouuntD">Select Subject 5</h3>
+            <div>
+                <select name="registered_subjects5" id="">
+                    <option value="none" selected disabled hidden>{{the_student.registered_subjects5.name}}</option>
+                    {{#each subject}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+
+                </select>
+            </div><br>
+            <input type="submit" value="Add subject 5">
+            </form>
+            <form class="accountDocForm" action="/students/student_register6" method="post">
+            <h3 class="titleCreateAccouuntD">Select Subject 6</h3>
+            <div>
+                <select name="registered_subjects6" id="">
+                    <option value="none" selected disabled hidden>{{the_student.registered_subjects6.name}}</option>
+                    {{#each subject}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+
+                </select><br>
+                <input type="submit" value="Add subject 1">
+            </div>   
+            <br>  
+            </form>
+    </section>
+
+</body>
+
+</html>

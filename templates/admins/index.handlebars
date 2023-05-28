@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+
+        background-image: linear-gradient(to bottom,
+                rgba(255, 136, 0, 0.767),
+                rgba(0, 0, 255, 0.5)), url("./templates/logins/abc.jpg");
+
+
+    }
+
+    header {
+        background-color: #f0f0f0;
+        width: 100%;
+        position: fixed;
+        /* z-index: 999; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 30px;
+    }
+
+    .logo {
+        text-decoration: none;
+        color: #3a6cf4;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    .navigation a {
+        color: #3a6cf4;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        margin-right: 50px;
+    }
+
+    .navigation a:hover {
+        color: #10b818;
+        font-size: 22px;
+    }
+
+    section {
+        padding: 100px 200px;
+    }
+
+    .main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: url(/templates/admins/cover1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .main h2 {
+        padding: 15px;
+        margin-top: 10px;
+        padding-left: 10px;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 15px;
+        font-size: 70px;
+        font-weight: 600;
+        /* text-align: center; */
+    }
+
+    .main h3 {
+        color: #ff7b00;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        background-color: rgba(0, 0, 0, .9);
+    }
+
+    input[type=submit]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="submit"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+
+    input[type="text"] {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    input[type="text"]:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+    .DepartmentForm {
+        width: 65%;
+        height: 25%;
+        margin-bottom: 300px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin-left: 15%;
+        background-color: rgba(0, 0, 0, .5);
+        text-align: center;
+
+    }
+
+    .titleForm {
+        margin-bottom: 30px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        font-size: 40px;
+        /* padding: 50px; */
+        font-family: cursive;
+        color: white;
+    }
+
+    .Department {
+        /* margin-top: 50px; */
+        background: url(/templates/admins/cover3.jpeg) no-repeat;
+        background-size: outo;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+
+    .UND {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    .UND:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+
+
+
+    .accountDocForm {
+        width: 65%;
+        height: 25%;
+        margin-bottom: 300px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin-left: 15%;
+        background-color: rgba(0, 0, 0, .5);
+        text-align: center;
+
+    }
+
+    .titleCreateAccouuntD {
+
+        margin-bottom: 30px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        font-size: 40px;
+        /* padding: 50px; */
+        font-family: cursive;
+        color: white;
+    }
+
+    .accountDocSection {
+
+        /* margin-top: 50px; */
+        background: url(/templates/admins/cover5.jpeg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+
+
+    input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+
+    .UNS {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    .UNS:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+
+
+
+    .accountStuForm {
+        width: 65%;
+        height: 25%;
+        margin-bottom: 300px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin-left: 15%;
+        background-color: rgba(0, 0, 0, .5);
+        text-align: center;
+
+    }
+
+    .titleCreateAccouuntS {
+
+        margin-bottom: 30px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        font-size: 40px;
+        /* padding: 50px; */
+        font-family: cursive;
+        color: white;
+    }
+
+    .accountStuSection {
+
+        /* margin-top: 50px; */
+        background: url(/templates/admins/cover7.jpeg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+
+
+
+
+
+
+    .subjectName {
+        display: block;
+        width: 50%;
+        padding: 100px;
+        margin-left: 150px;
+        margin-bottom: 150px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    .subjectName:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+    .subjectCode {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    .subjectCode:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+
+    select {
+        display: block;
+        padding: 8px;
+        margin-left: 150px;
+        font-size: 17px;
+        font-family: cursive;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        width: 53%;
+        background-color: #fff;
+        color: #333;
+    }
+
+    select:hover {
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+
+    .AddSabjectForm {
+        width: 65%;
+        height: 25%;
+        margin-bottom: 300px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin-left: 15%;
+        background-color: rgba(0, 0, 0, .5);
+        text-align: center;
+
+    }
+
+    .titleAddSubject {
+
+        margin-bottom: 30px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        font-size: 40px;
+        /* padding: 50px; */
+        font-family: cursive;
+        color: white;
+    }
+
+    .AddSubjectSection {
+
+        /* margin-top: 50px; */
+        background: url(/templates/admins/cover8.jpeg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+</style>
+
+
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="project software 2 ibn elhaythm website" />
+    <title>ibn elhytham</title>
+
+</head>
+
+<body>
+
+    <header>
+        
+        <a href="#" class="logo">Adminstrator</a>
+        <form action="/logins">
+            <button  type="submit" class="btn btn-warning" style="font-size: 160%;" >Log out</button>
+           </form>
+        <nav class="navigation" >
+            <a href="#Add Department" style="font-size: 25px;">Add a Department</a>
+            <a href="#Add subject"style="font-size: 25px;">Add subject</a>
+            <a href="#Create account for doctor"style="font-size: 25px;">Create account for doctor</a>
+            <a href="#Create account for student"style="font-size: 25px;">Create account for student</a>
+            <a href="/admins/show_all_subjects"style="font-size: 25px;">Subjects List</a>
+            
+            
+
+        </nav>
+    </header>
+    <section class="main">
+        <div>
+
+            <h2> HELLO Admin</h2>
+
+        </div>
+    </section>
+
+
+    <section class="Department" id="Add Department">
+        <form class="DepartmentForm" action="/admins/add_department" method="post">
+            <h3 class="titleForm">Add Department</h3>
+            <input name="name" type="text" placeholder="Department Name">
+            <input name="code" type="text" placeholder="Department Code">
+            <input type="submit">
+            <div>
+                <a href="/admins/departments" style="font-size: xx-large;">Show all departments</a>
+            </div>
+
+        </form>
+    </section>
+    <section class="accountDocSection" id="Create account for doctor">
+        <form class="accountDocForm" action="/admins/add_doctor" method="post">
+            <h3 class="titleCreateAccouuntD">create account for doctor</h3>
+            <input name="doctor_name" type="text" placeholder="name">
+            <input name="doctor_username" type="text" placeholder="username">
+            <input name="doctor_password" type="text" placeholder="password">
+            <input type="submit">
+            <div>
+                <a href="/admins/doctors" style="font-size: xx-large;">Show all Doctor</a>
+            </div>
+            {{!-- class="UND" --}}
+
+        </form>
+
+
+    </section>
+
+
+    <section class="accountStuSection" id="Create account for student">
+        <form class="accountStuForm" action="/admins/add_student" method="post">
+            <h3 class="titleCreateAccouuntS">Create account for student</h3>
+            <input name="student_name" class="UNS" type="text" placeholder="name">
+            <input name="student_username" class="UNS" type="text" placeholder="username">
+            <input name="student_password" class="UNS" type="text" placeholder="password">
+            <input name="student_academic_number" class="UNS" type="text" placeholder="academic_number">
+            <div>
+                <select name="department" id="">
+                    {{#each department}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+
+                </select>
+            </div><br>
+
+            <input type="submit" value="create">
+            <div>
+                <a href="/admins/students" style="font-size: xx-large;">Show all Students</a>
+            </div>
+
+
+        </form>
+    </section>
+
+    <section class="AddSubjectSection" id="Add subject">
+        <form class="AddSabjectForm" action="/admins/add_subject" method="post">
+            <h3 class="titleAddSubject">Add subject</h3>
+            <input name="name" class="subjectName" type="text" placeholder="subject Name">
+            <input name="code" class="subjectCode" type="text" placeholder="subject Code">
+            <div>
+                <select name="Pre_requisite" id="">
+                     <option value="none" selected >None</option>
+                    {{#each subject}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+
+                </select>
+            </div>
+<br>
+            <div>
+                <select name="department" id="">
+                    {{#each department}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+
+                </select>
+            </div>
+<br>
+            <div>
+                <select name="doctor" id="">
+                    {{#each doctor}}
+                    <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+
+                </select>
+            </div>
+
+            <input type="submit" value="Add">
+             <div>
+                <a href="/admins/subjects" style="font-size: xx-large;">Show all Subjects</a>
+            </div>
+        </form>
+
+    </section>
+
+</body>
+
+</html>

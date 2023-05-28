@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+   * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+
+        background-image: linear-gradient(to bottom,
+                rgba(255, 136, 0, 0.767),
+                rgba(0, 0, 255, 0.5)), url("./templates/logins");
+
+
+    }
+
+    header {
+        background-color: #f0f0f0;
+        width: 100%;
+        position: fixed;
+        /* z-index: 999; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 30px;
+    }
+
+
+
+    section {
+        padding: 100px 200px;
+    }
+
+
+
+
+
+     input[type=submit]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="submit"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+
+    input[type="text"] {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    input[type="text"]:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+ input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+    input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+      select {
+        display: block;
+        padding: 8px;
+        margin-left: 150px;
+        font-size: 17px;
+        font-family: cursive;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        width: 53%;
+        background-color: #fff;
+        color: #333;
+    }
+      select:hover {
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+    .accountDocForm {
+        width: 65%;
+        height: 25%;
+        margin-bottom: 100px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin-left: 15%;
+        background-color: rgba(0, 0, 0, .5);
+        font-size: 30px;
+        color: aliceblue;
+        text-align: center;
+
+    }
+
+    .text {
+
+        font-size: 30px;
+        color: aliceblue;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .titleCreateAccouuntD {
+
+
+        font-size: 50px;
+        padding: 30px;
+        font-family: cursive;
+        color: rgb(72, 75, 253);
+        text-align: center;
+    }
+
+    .UNS {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+</style>
+
+<body>
+   
+           
+     <div class="container">
+  <br>
+    <div class="d-flex justify-content-between">
+  <h1 style="font-size: 60px;color: #2f1dd3;"> Your Subjects</h1> <br><br>
+  <div>
+    <form action="/students" >
+      <button type="submit" class="btn btn-light" style="font-size: 160%;">Back</button>
+      </form>
+  </div>
+  </div>
+    
+<br><br>
+  
+  <div class="d-flex justify-content-between">
+ <h1 style="font-size: x-large;">
+    {{the_student.registered_subjects1.name}}
+    </h1>
+    <div style="font-size: x-large;" class="myDiv">
+     <form action="/students/{{the_student.registered_subjects1._id}}">
+      <button type="submit" class="btn btn-danger">Materials</button>
+      </form>
+    </div>
+  </div>
+<br><br>
+  <div class="d-flex justify-content-between">
+ <h1 style="font-size: x-large;">
+    {{the_student.registered_subjects2.name}}
+    </h1>
+    <div style="font-size: x-large;" class="myDiv">
+     <form action="/students/{{the_student.registered_subjects2._id}}">
+      <button type="submit" class="btn btn-danger">Materials</button>
+      </form>
+    </div>
+  </div>
+<br><br>
+<div class="d-flex justify-content-between">
+ <h1 style="font-size: x-large;">
+    {{the_student.registered_subjects3.name}}
+    </h1>
+    <div style="font-size: x-large;" class="myDiv">
+     <form action="/students/{{the_student.registered_subjects3._id}}">
+      <button type="submit" class="btn btn-danger">Materials</button>
+      </form>
+    </div>
+  </div>
+<br><br>
+<div class="d-flex justify-content-between">
+ <h1 style="font-size: x-large;">
+    {{the_student.registered_subjects4.name}}
+    </h1>
+    <div style="font-size: x-large;" class="myDiv">
+     <form action="/students/{{the_student.registered_subjects4._id}}">
+      <button type="submit" class="btn btn-danger">Materials</button>
+      </form>
+    </div>
+  </div>
+<br><br>
+<div class="d-flex justify-content-between">
+ <h1 style="font-size: x-large;">
+    {{the_student.registered_subjects5.name}}
+    </h1>
+    <div style="font-size: x-large;" class="myDiv">
+     <form action="/students/{{the_student.registered_subjects5._id}}">
+      <button type="submit" class="btn btn-danger">Materials</button>
+      </form>
+    </div>
+  </div>
+<br><br>
+<div class="d-flex justify-content-between">
+ <h1 style="font-size: x-large;">
+    {{the_student.registered_subjects6.name}}
+    </h1>
+    <div style="font-size: x-large;" class="myDiv">
+     <form action="/students/{{the_student.registered_subjects6._id}}">
+      <button type="submit" class="btn btn-danger">Materials</button>
+      </form>
+    </div>
+  </div>
+<br><br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+       {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+
+        background-image: linear-gradient(to bottom,
+                rgba(255, 136, 0, 0.767),
+                rgba(0, 0, 255, 0.5)), url("./templates/logins/abc.jpg");
+
+
+    }
+
+    header {
+        background-color: #f0f0f0;
+        width: 100%;
+        position: fixed;
+        /* z-index: 999; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 30px;
+    }
+
+    .logo {
+        text-decoration: none;
+        color: #3a6cf4;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    .navigation a {
+        color: #3a6cf4;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        margin-right: 50px;
+    }
+
+    .navigation a:hover {
+        color: #10b818;
+        font-size: 22px;
+    }
+
+    section {
+        padding: 100px 200px;
+    }
+
+    .main {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: url(/templates/admins/cover1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .main h2 {
+        padding: 15px;
+        margin-top: 10px;
+        padding-left: 10px;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 15px;
+        font-size: 70px;
+        font-weight: 600;
+        /* text-align: center; */
+    }
+
+    .main h3 {
+        color: #ff7b00;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        background-color: rgba(0, 0, 0, .9);
+    }
+
+    input[type=submit]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="submit"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+
+    input[type="text"] {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    input[type="text"]:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+    .DepartmentForm {
+        width: 65%;
+        height: 25%;
+        margin-bottom: 300px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin-left: 15%;
+        background-color: rgba(0, 0, 0, .5);
+        text-align: center;
+
+    }
+
+    .titleForm {
+        margin-bottom: 30px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        font-size: 40px;
+        /* padding: 50px; */
+        font-family: cursive;
+        color: white;
+    }
+
+    .Department {
+        /* margin-top: 50px; */
+        background: url(/templates/admins/cover3.jpeg) no-repeat;
+        background-size: outo;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+
+    .UND {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    .UND:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+
+
+
+    .accountDocForm {
+        width: 65%;
+        height: 25%;
+        margin-bottom: 300px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin-left: 15%;
+        background-color: rgba(0, 0, 0, .5);
+        text-align: center;
+
+    }
+
+    .titleCreateAccouuntD {
+
+        margin-bottom: 30px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        font-size: 40px;
+        /* padding: 50px; */
+        font-family: cursive;
+        color: white;
+    }
+
+    .accountDocSection {
+
+        /* margin-top: 50px; */
+        background: url(/templates/admins/cover5.jpeg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+
+
+    input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+
+    .UNS {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    .UNS:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+
+
+
+    .accountStuForm {
+        width: 65%;
+        height: 25%;
+        margin-bottom: 300px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin-left: 15%;
+        background-color: rgba(0, 0, 0, .5);
+        text-align: center;
+
+    }
+
+    .titleCreateAccouuntS {
+
+        margin-bottom: 30px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        font-size: 40px;
+        /* padding: 50px; */
+        font-family: cursive;
+        color: white;
+    }
+
+    .accountStuSection {
+
+        /* margin-top: 50px; */
+        background: url(/templates/admins/cover7.jpeg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    input[type="button"]:hover {
+        background-color: #1f06ff;
+    }
+
+    input[type="button"] {
+        background-color: #18a00c;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: large;
+
+    }
+
+
+
+
+
+
+    .subjectName {
+        display: block;
+        width: 50%;
+        padding: 100px;
+        margin-left: 150px;
+        margin-bottom: 150px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    .subjectName:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+    .subjectCode {
+        display: block;
+        width: 50%;
+        padding: 8px;
+        margin-left: 150px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+
+    .subjectCode:hover {
+
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+
+    select {
+        display: block;
+        padding: 8px;
+        margin-left: 150px;
+        font-size: 17px;
+        font-family: cursive;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        width: 53%;
+        background-color: #fff;
+        color: #333;
+    }
+
+    select:hover {
+        border: 4px solid rgb(25, 241, 6);
+        border-radius: 15px;
+    }
+
+
+    .AddSabjectForm {
+        width: 65%;
+        height: 25%;
+        margin-bottom: 300px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin-left: 15%;
+        background-color: rgba(0, 0, 0, .5);
+        text-align: center;
+
+    }
+
+    .titleAddSubject {
+
+        margin-bottom: 30px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        font-size: 40px;
+        /* padding: 50px; */
+        font-family: cursive;
+        color: white;
+    }
+
+    .AddSubjectSection {
+
+        /* margin-top: 50px; */
+        background: url(/templates/admins/cover8.jpeg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+   
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</section>
+
+    <section class="accountDocSection" id="select student passed subjects">
+        <form class="accountDocForm"  action="/admins/select_subjects" method="post">
+            <h3 class="titleCreateAccouuntD">Select student passed subjects</h3>
+            <div>
+                    {{#each subject}}
+                    <input type="checkbox" style="width: 20px; height:20px;" name="one" value="{{_id}}"><label style="color: #ffffff;font-size: 25px;margin: 5px;c" >{{name}}</label>   &nbsp&nbsp&nbsp&nbsp
+                    {{/each}}
+            </div>
+            
+<br>
+            <input type="submit" value="create">
+
+        </form>
+
+
+    </section>
+
+
+
+</body>
+</html>

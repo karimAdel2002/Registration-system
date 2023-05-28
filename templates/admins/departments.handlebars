@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+  
+    .myDiv {
+  border: 15px outset rgb(75, 74, 74);
+  background-color: lightblue;    
+  text-align: center;
+}
+
+    body {
+
+        background-image: linear-gradient(to bottom,
+                rgba(255, 136, 0, 0.767),
+                rgba(0, 0, 255, 0.5)), url("./templates/logins/abc.jpg");
+
+
+    }
+
+    header {
+        background-color: #f0f0f0;
+        width: 100%;
+        position: fixed;
+        /* z-index: 999; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 30px;
+    }
+
+</style>
+<head>
+ 
+  
+</head>
+  <body>
+    <div class="container">
+  <br>
+    <div class="d-flex justify-content-between">
+  <h1 style="font-size: 60px;color: #2f1dd3;">All Departments</h1> <br><br>
+  <div>
+    <form action="/admins" >
+      <button type="submit" class="btn btn-light" style="font-size: 160%;">Back</button>
+      </form>
+  </div>
+  </div>
+    
+<br><br>
+  
+  {{#each department}}
+  <div class="d-flex justify-content-between">
+ <h1 style="font-size: x-large;">
+    {{name}}
+    </h1>
+    <div style="font-size: x-large;" class="myDiv">
+     <a href="/admins/{{_id}}/edit_departments">Edit</a>
+     <form action="/admins/{{_id}}?_method=DELETE" method="post">
+      <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+    </div>
+  </div>
+  
+<br>
+<div style="font-size:large;color: #ffffff;">
+    Code:
+    {{code}}
+</div><br><br>
+{{/each}}
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</body>
+</html>
