@@ -11,9 +11,9 @@ import methodOverride from 'method-override';
 import cookieParser from 'cookie-parser';
 
 import mongoose from 'mongoose';
-// import doctor from './model/doctor.js';
-// import student from './model/student.js';
-// import admin from './model/admin.js';
+import doctor from './model/doctor.js';
+import student from './model/student.js';
+import admin from './model/admin.js';
 
 mongoose.connect(process.env.mongooconectionurl)
 const app = express();
@@ -34,35 +34,36 @@ app.use('/doctors',doctorRouter)
 app.use('/students',studentRouter)
 
 
-// console.log(mongoose.connection.readyState);
+console.log(mongoose.connection.readyState);
 
-// app.get('/', async(req,res) => {
-//     await admin.create({
-//         name: 'Mr.Admin2',
-//         username: 'admin2',
-//         password: 'admin1234',
+app.get('/', async(req,res) => {
+    await admin.create({
+        name: 'Mr.Admin2',
+        username: 'admin2',
+        password: 'admin1234',
 
-//     });
-//     await doctor.create({
-//         name: 'Mr.Doctor2',
-//         username: 'Doctor2',
-//         password: 'Doctor1234',
-//         his_subjects:null,
+    });
+    await doctor.create({
+        name: 'Mr.Doctor2',
+        username: 'Doctor2',
+        password: 'Doctor1234',
+        his_subjects:null,
 
 
-//     });
-//     await student.create({
-//         name: 'Mr.student2',
-//         username: 'student2',
-//         password: 'student1234',
-//         academic_number:'2004892',
-//         department: null,
-//         passed_subjects: null,
-//         registered_subjects: null
+    });
+    await student.create({
+        name: 'Mr.student2',
+        username: 'student2',
+        password: 'student1234',
+        academic_number:'2004892',
+        department: null,
+        passed_subjects: null,
+        registered_subjects: null  
 
-//     });
-//     console.log('Added');
-// });
+
+    });
+    console.log('Added');
+});
 app.listen(process.env.port, () => {
     
     console.log('started the application on http://localhost:' + process.env.port)
